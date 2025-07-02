@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atelier : Impression 3D & Réalité Virtuelle</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+      border-radius: 1.5rem;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-bl from-[#0f172a] to-[#1e293b] text-gray-100 font-sans">
+
+  <!-- Hero Immersif -->
+<header class="relative h-screen bg-center bg-no-repeat bg-cover" style="background-image: url('images/atelier-VR.jpg');">
+  <div class="absolute inset-0 bg-gradient-to-b from-black/70 to-black/30"></div>
+  <div class="relative z-10 h-full flex flex-col justify-center items-center text-center text-white px-6">
+    <h1 class="text-5xl md:text-7xl font-extrabold drop-shadow-2xl mb-4 fade-in">Atelier Découverte</h1>
+    
+    <p class="text-3xl md:text-4xl mb-6 fade-in font-semibold">
+      <span class="text-orange-400">Impression 3D</span>
+      <span class="text-white"> &amp; </span>
+      <span class="text-pink-400">Réalité Virtuelle</span>
+    </p>
+    
+    <p class="max-w-xl text-lg fade-in">
+      Une immersion totale dans les technologies créatives et numériques du futur.
+    </p>
+    
+    <a href="#intro" class="mt-12 inline-block animate-bounce text-orange-400 hover:text-white transition duration-300">
+      <i data-feather="chevron-down" class="w-10 h-10"></i>
+    </a>
+  </div>
+</header>
+
+  <!-- Présentation -->
+  <section id="intro" class="max-w-6xl mx-auto px-6 py-20 space-y-20">
+    <div class="text-center fade-in">
+      <h2 class="text-4xl font-bold text-orange-500 mb-4">Pourquoi participer ?</h2>
+      <p class="text-lg leading-relaxed max-w-3xl mx-auto text-gray-300">
+        Initiez-vous aux technologies de demain à travers une expérience concrète et stimulante : créez, explorez, imaginez.
+      </p>
+    </div>
+
+    <!-- Impression 3D -->
+    <div class="grid md:grid-cols-2 gap-12 items-center glass p-6 fade-in">
+      <img src="images/imprimante.jpg" alt="Impression 3D" class="rounded-3xl shadow-2xl hover:scale-105 transition duration-500 object-cover w-full h-auto" />
+      <div>
+        <h3 class="text-3xl font-semibold text-orange-400 mb-4">Créer avec l’impression 3D</h3>
+        <p class="mb-4 text-gray-200">
+          Concevez vos objets via des logiciels de modélisation et imprimez-les en direct ! Apprenez à créer en 3D de A à Z.
+        </p>
+        <ul class="space-y-2 text-gray-100 list-disc list-inside">
+          <li>Introduction à TinkerCAD & Fusion360</li>
+          <li>Modélisation assistée par ordinateur</li>
+          <li>Impression et objets réels à emporter</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Réalité virtuelle -->
+    <div class="grid md:grid-cols-2 gap-12 items-center glass p-6 fade-in">
+      <div class="md:order-1">
+        <h3 class="text-3xl font-semibold text-pink-400 mb-4">Plonger dans la réalité virtuelle</h3>
+        <p class="mb-4 text-gray-200">
+          Enfilez un casque et découvrez des univers immersifs en 3D : pédagogie, exploration, interaction et jeu.
+        </p>
+        <ul class="space-y-2 text-gray-100 list-disc list-inside">
+          <li>Casques Oculus Quest 2</li>
+          <li>Applications éducatives & artistiques</li>
+          <li>Exploration libre à 360°</li>
+        </ul>
+      </div>
+      <img src="images/casque-vrr.jpg" alt="Réalité Virtuelle" class="rounded-3xl shadow-2xl hover:scale-105 transition duration-500 object-cover w-full h-auto" />
+    </div>
+  </section>
+
+  <!-- Interaction -->
+  <section class="py-16 px-6 text-center fade-in">
+    <h2 class="text-3xl font-bold text-white mb-6">Quel univers vous attire le plus ?</h2>
+    <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+      <a href="impression3d.html" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-full shadow-lg transition">
+        Impression 3D
+      </a>
+      <a href="realitevirtuelle.html" class="bg-pink-500 hover:bg-pink-600 text-white px-8 py-3 rounded-full shadow-lg transition">
+        Réalité Virtuelle
+      </a>
+    </div>
+  </section>
+
+  <!-- Témoignage -->
+  <section class="py-16 px-6 fade-in">
+    <div class="max-w-3xl mx-auto text-center">
+      <blockquote class="italic text-xl text-gray-300">
+        “Une expérience incroyable ! J’ai créé mon premier porte-clés en 3D et visité un musée virtuel. Ludique et formateur.”
+      </blockquote>
+      <div class="mt-4 text-orange-400 font-semibold text-lg">– Léa, participante 2024</div>
+    </div>
+  </section>
+
+  <!-- Appel à l’action -->
+  <section class="text-center py-20 px-6 bg-gradient-to-br from-orange-500 to-pink-500 text-white fade-in">
+    <h4 class="text-3xl font-bold mb-4">Prêt(e) à entrer dans le futur ?</h4>
+    <p class="mb-8 text-lg">Inscrivez-vous dès maintenant à notre prochain atelier.</p>
+    <a href="inscription.html" class="bg-white text-orange-600 font-semibold px-8 py-3 rounded-full hover:bg-orange-100 transition duration-300">
+  S'inscrire
+</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-sm text-gray-400 py-8">
+    © 2025 Atelier FuturTech — Tous droits réservés
+  </footer>
+
+  <!-- Intersection Observer pour fade-in -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+  <!-- Feather Icons -->
+  <script>
+    feather.replace();
+  </script>
+</body>
+</html>
